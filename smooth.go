@@ -16,16 +16,16 @@ type SmoothStreamingMedia struct {
 }
 
 func Unmarshal(ism []byte) (*SmoothStreamingMedia, error) {
-	var ssm *SmoothStreamingMedia
-	err := xml.Unmarshal(ism, ssm)
+	var ssm SmoothStreamingMedia
+	err := xml.Unmarshal(ism, &ssm)
 	if err != nil {
 		return nil, err
 	}
-	return ssm, nil
+	return &ssm, nil
 }
 
 func (ism SmoothStreamingMedia) Marshal() ([]byte, error) {
-	return []byte(""), nil
+	return xml.Marshal(ism)
 }
 
 type StreamIndexType struct {
