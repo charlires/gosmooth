@@ -1,4 +1,6 @@
-# Smooth Streaming Parser library
+# Smooth Streaming parser library
+
+[![Reference](https://godoc.org/github.com/davimdo/gosmooth?status.svg)](https://godoc.org/github.com/davimdo/gosmooth)
 
 Godash is a go module to parse ISM files that corresponds to the Microsoft 
 Smooth Streaming protocol
